@@ -1,0 +1,42 @@
+.main-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.headers{
+    padding-top: 12vh;
+    width: 90%;
+}
+.headers h1{
+    color: #BB2525;
+}
+.headers p{
+    padding-top: 10px;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.RImgs{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.Informative{
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width:850px) {
+    .RImgs{
+        padding: 10px 10px;
+        /* border: #BB2525 1px solid; */
+    }
+    .RImgs img{
+        height: 30vh;
+        width: 100vw;
+    }
+}

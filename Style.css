@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Lato&family=Mukta&family=Roboto&family=Ubuntu:ital,wght@0,500;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+nav{
+    background-color: #B31312;
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+}
+.Logo{
+    color: #FFF5E0;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 10vh;
+    font-weight: bold;
+    padding: 0px 100px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 3vw;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 10vh;
+    margin: 0px 10px;
+}
+
+nav ul li .mainBtn{
+    color: #FFF5E0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 7px 13px;
+}
+a.Active, .mainBtn:hover{
+    background: #EA906C;
+    opacity: 0.5;
+    transition: .5s;
+    color: #2B2A4C;
+}
+
+.checkbtn{
+    font-size: 2rem;
+    color: white;
+    float: right;
+    line-height: 10vh;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 942px) {
+    label.logo{
+        font-size: 2rem;
+        z-index: 0;
+        text-align: start;
+        padding: 0px 25px;
+    }
+    nav ul li a{
+        font: 1rem;
+    }
+}
+@media (max-width:858px) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #EA906C;
+        top: 10vh;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 1.2rem;
+    }
+    a.Active, a:hover{
+        background: none;
+        color: #B31312;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+.header{
+    height: 100%;
+    width: 100%;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#FFF5E0;
+}
+.Htitle{
+    width: 50%;
+}
+.Htitle h1{
+    font-size: 3rem;
+    color: #B31312;
+}
+.Htitle p {
+    padding-top: 10px;
+    color: #2B2A4C;
+    font-size: 1.5rem;
+}
+.btn{
+    text-align: center;
+}
+
+
+@media (max-width:850px) {
+    .header{
+        padding: 5px 5px;
+        flex-wrap: wrap;
+        align-items: start;
+        padding-top: 11vh;
+    }
+    .Htitle{
+        width: 100%;
+        text-align: center;
+    }
+    .Htitle p {
+        padding-top: 10px;
+        font-size: 1.2rem;
+    }
+    .Htitle h1{
+        font-size: 2.5rem;
+        
+    }
+}
+
+.btn{
+    text-transform: uppercase;
+    padding: 10px 17px;
+    background-color: #B31312;
+    color: #FFF5E0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.btn:hover{
+    background-color: #EA906C;
+    transition: .5s;
+}
+.sweeper-Img{
+    height: 300px;
+    width: 300px;
+    overflow:hidden;
+    position: relative;
+}
+.Sweeper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.contents{
+    height: fit-content;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #D83F31;
+    position: relative;
+    overflow: hidden;
+}
+.CItems{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 30px;
+}
+@media (max-width:868px) {
+    .CItems{
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+    .Links-icons{
+        padding-top: 10px;
+    }
+}
+
+.Links-icons img{
+    height: 17vh;
+    cursor: pointer;
+}
+.Links-icons:hover{
+    filter: drop-shadow(5px 5px 10px #555);
+    height: 19vh;
+}
+.Links-icons h2{
+    padding-top: 20px;
+}
+.Links-icons a{
+    color: black;
+}
+.Fact-content{
+    height: 100%;
+    width: 100%;
+    background-color: #FFF5E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+@media (max-width:850px) {
+    .Fact-content{
+        display: none;
+    }
+}
+.Cheading{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+    color: #FFF5E0;
+}
+.slider{
+    width: 85%;
+    height: 75%;
+    position: relative;
+    overflow: hidden;
+}
+.slides{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    position: absolute;
+    transition: 1s;
+}
+
+#back, #Forward{
+    background-color: #2B2A4C;
+    padding: 10px 10px;
+    color: wheat;
+    border: none;
+    margin: 10px;
+    font-size: 2.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.test-overview{
+    height: 30%;
+    width: 100%;
+    background-color: #2B2A4C;
+}
+@media (max-width:850px) {
+    .test-overview{
+        height: 40vh;
+    }
+    .Theader h1{
+        font-size: 1.5rem;
+    }
+    .Tcontent p{
+        font-size: 1rem;
+    }
+    .Testbtn{
+        font-weight: bolder;
+    }
+}
+.Theader h1{
+    text-align: center;
+    padding: 20px 25px;
+    color: #FFF5E0;
+    font-family: 'Kanit', sans-serif;
+
+}
+.Tcontent{
+    text-align: center;
+    padding: 0px 25px;
+    color: #FFF5E0;
+    font-size: 1.3rem;
+}
+.Testbtn{
+    background-color: #faeccd;
+    padding: 9px 17px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.Testbtn a{
+    color: #B31312;
+}
+.Testbtn a:hover{
+    color: #2B2A4C;
+}
+.Testbt{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.Testbtn:hover{
+    background-color: #D83F31;
+    transition: .5s;
+}
+.divder{
+    height: 5%;
+    width: 100%;
+    background-color: #faeccd;
+}
+
+
+.Footer{
+    height: 40%;
+    width: 100%;
+    background-color: #D83F31;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.line{
+    height: 80%;
+    width: 2px;
+    background-color: #2B2A4C;
+}
+.Fcontact{
+    width: 50%;
+    color: #faeccd;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.Fcontact h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-stretch: expanded;
+}
+
+#Email{
+    margin-top: 40px;
+    padding: 10px 10px;   
+    width: 20vw;
+    border: none;
+    background-color: #faeccd;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 5px;
+}
+
+#BEmail{
+    padding: 10px 10px;  
+    width: 8vw;
+    border: none;
+    background-color: #DAD4B5;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 5px;
+}
+#BEmail a{
+    color: #B31312;
+}
+#BEmail:hover{
+    background-color: #2B2A4C;
+    transition: .5s;
+}
+.section h3{
+    padding-top: 7px;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-stretch: expanded;
+}
+.section a{
+    color: #DAD4B5;
+}
+.section h1{
+    font-size: 1.4rem;
+}
+
+.section a:hover{
+    color: #2B2A4C;
+    transition: .5s;
+}
+
+.active{
+    color: #2B2A4C;
+    font-size: 3rem;
+}
+@media (max-width:850px) {
+    .Footer{
+        height: fit-content;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .line{
+        width: 80%;
+        height: 1px;
+        background-color: #2B2A4C;
+    }
+    .section{
+        width: 100%;
+        text-align: center;
+        padding: 20px 20px;
+    }
+    .Fcontact{
+        width: 100%;
+        padding: 10px 10px;
+    }
+    #Email{
+        width: fit-content;
+        padding: 10px 10px;
+    }
+    #BEmail{
+
+        width: fit-content;
+        padding: 10px 10px;
+    }
+    .divder{
+        height: 0;
+    }
+}
+.sublinks{
+    width: 100%;
+    padding-top: 12vh;
+    background-color: #D83F31;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+}
+.sublinks-Des{
+    padding-bottom: 2vh;
+}
+
+.sublinks-Des a{
+    padding-left: 25px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #DAD4B5;
+}
+@media (max-width:850px) {
+    .sublinks{
+        height: fit-content;
+        position: static;
+    }
+    .sublinks-Des a{
+        display: block;
+        padding-left: 0%;
+    }
+    
+}
+.RoadContent{
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    height: max-content;
+    width: 100%;
+    background-color: #faeccd;
+    display: flex;
+    justify-content: center;
+}
+
+.roadtext{
+    width: 80%;
+    height: 100%;
+}
+.roadtext p{
+    padding-top: 3vh;
+    font-size: 1.5rem;
+    color: #2B2A4C;
+}
+
+.roadtext li{
+    padding-top: 3vh;
+    font-size: 1.5rem;
+    list-style: decimal;
+    color: #2B2A4C;
+}
+.roadtext h3{
+    padding-top: 3vh;
+    font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.Rheader{
+    font-size: 2.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+.roadtext img{
+    height: 30vh;
+    float: right;
+}
+.subHeader{
+    font-weight: bold;
+}
+@media (max-width:850px) {
+    .roadtext{
+        width: 95%;
+    }
+    .Rheader{
+        font-size: 2.5rem;
+    }
+    .roadtext p{
+        font-size: 1.2rem;
+    }
+    .roadtext ol{
+        padding-left: 5vw;
+    }
+    .roadtext li{
+        font-size: 1.2rem;
+        list-style: decimal;
+    }
+    .roadtext img{
+        height: 15vh;
+    }
+}
+
+.Rage{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    background-color: #faeccd;
+}
+.RageHeader{
+    padding-top: 1vh;
+    width: 90%;
+}
+.RageHeader h1{
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    font-size: 2rem;
+}
+.RageHeader p{
+    padding-top: 2vh;
+    font-size: 1.3rem;
+}
+.RageHeader li{
+    list-style: decimal;
+    font-size: 1.3rem;
+    padding-top: 1vh;
+}
+.RageHeader ol img{
+    float: right;
+    height: 30vh;
+}
+@media (max-width:850px) {
+    .RageHeader h1{
+        font-size: 1.5rem;
+    }
+    .RageHeader p{
+        font-size: 1.2rem;
+    }
+    .RageHeader ol{
+        padding-left: 12px;
+    }
+    .RageHeader ol img{
+        height: 15vh;
+    }
+}
+table, th, td{
+    margin-top: 5vh;
+    border: 1px solid #B31312;
+    border-collapse: collapse;
+    width: fit-content;
+    padding: 10px 10px;
+    font-size: 1.2rem   ;
+}
+th{
+    background-color: #EA906C;
+    font-size: 1.5rem;
+}
+.app-container{
+    padding-top: 10vh;
+    height: 100%;
+    width: 100%;
+    background-color: #faeccd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app{
+    width: 50%;
+    background-color: #2B2A4C;
+    padding: 50px 30px;
+    border-radius: 5px;
+}
+.app h1{
+    color: #DAD4B5;
+    text-align: center;
+    padding-bottom: 10px;
+}
+@media (max-width:850px) {
+    .app{
+        width: 95%;
+    }
+    .app-container{
+        height: 100%;
+    }
+}
+.draw{
+    width: 100%;
+    height: 1px;
+    background-color: #DAD4B5;
+    color: #DAD4B5;
+    text-align: center;
+}
+#question{
+    color: #DAD4B5;
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+.Abtn{
+    width: 100%;
+    height: fit-content;
+    padding: 10px 10px;
+    color: #DAD4B5;
+    border: white 1px solid;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color: #2B2A4C;
+    text-align: start;
+    font-weight: bold;
+}
+.Abtn:hover:not([disabled]){
+    background-color: #fff;
+    transition: .5s;
+    color: #2B2A4C;
+}
+.Abtn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: none;
+}
+
+#next-btn:hover{
+    background-color: #2B2A4C;
+    color: #DAD4B5;
+    border: #DAD4B5 2px solid;
+
+    transition: all .5s;
+}
+
+.correct{
+    background: lightgreen;
+    color: #2B2A4C;
+}
+
+.incorrect{
+    background: #B31312;
+}
+.AboutUs-Container{
+    padding-top: 12vh;
+    background-color: #FFF5E0;
+    height: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.about{
+    width: 80%;
+}
+.AboutHeader{
+    color: #B31312;
+}
+.Mission{
+    color: #2B2A4C;
+    padding: 30px 10px;
+    font-size: 1.5rem;
+}
+
+@media (max-width:850px) {
+    .AboutUs-Container{
+        height: fit-content;
+    }
+    .about{
+        width: 95%;
+    }
+    .Mission{
+        font-size: 1.3rem;
+    }
+}
+.copyright{
+    display: block;
+    color: #DAD4B5;
+}
+.copy{
+    padding: 10px 10px;
+    text-align: center;
+    background-color: #2B2A4C;
+}
